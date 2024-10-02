@@ -9,7 +9,7 @@ Route::get('/resumes', function () {
 })->name('resume');
 
 Route::get('/', function () {
-    return view('login');
+    return view('index');
 });
 
 Route::post('/', function (Request $request) {

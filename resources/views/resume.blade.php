@@ -3,6 +3,91 @@
     <head>
         <meta charset="utf-8">
         <title>My Resume</title>
+        <style>
+
+            .section-header {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            
+            .section-header h2 {
+                font-size: 32px;
+                color: #333;
+                font-weight: 700;
+            }
+            
+            .project-wrap {
+                background-color: #fff;
+                box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                overflow: hidden;
+                margin-bottom: 30px;
+                transition: transform 0.3s ease;
+            }
+            
+            .project-wrap:hover {
+                transform: translateY(-10px);
+            }
+            
+            .project-wrap figure {
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .project-wrap img {
+                width: 100%;
+                height: auto;
+                transition: transform 0.5s ease;
+            }
+            
+            .project-wrap:hover img {
+                transform: scale(1.1);
+            }
+            
+            .link-preview, .link-details {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, 0.6);
+                padding: 10px 15px;
+                border-radius: 50%;
+                color: #fff;
+                font-size: 18px;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+            
+            .link-preview {
+                left: 35%;
+            }
+            
+            .link-details {
+                left: 65%;
+            }
+            
+            .project-wrap:hover .link-preview, 
+            .project-wrap:hover .link-details {
+                visibility: visible;
+                opacity: 1;
+            }
+            
+            .project-title {
+                display: block;
+                text-align: center;
+                padding: 20px;
+                font-size: 18px;
+                font-weight: 600;
+                color: #333;
+                background-color: #f8f9fa;
+                transition: color 0.3s ease;
+            }
+            
+            .project-title:hover {
+                color: #ff6600;
+            }
+</style>            
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Resume Website Template Free Download" name="keywords">
         <meta content="Resume Website Template Free Download" name="description">
@@ -200,120 +285,109 @@
                 
                 <!-- Service Start -->
                 <div class="service" id="service">
-                    <div class="content-inner container py-5">
-                        <div class="content-header mb-4">
+                    <div class="content-inner">
+                        <div class="content-header">
                             <h2>Portfolio</h2>
                         </div>
-                        <div class="row text-center">
-                            <!-- MySQL Section -->
-                            <div class="col-md-6 mb-4 mt-3">
-                                <h4>MySQL Language</h4>
-                                <ul class="list-unstyled mt-3">
-                                    <li class="mb-2">
-                                        <span class="fa fa-desktop"></span>
-                                        <a href="https://ws.jom-jom.com/student_management/" target="_blank">Student Management</a>
-                                    </li>
-                                    <li class="mb-2">
-                                        <span class="fa fa-desktop"></span>
-                                        <a href="https://ws.jom-jom.com/To-do%20List/" target="_blank">To-Do List</a>
-                                    </li>
-                                    <li>
-                                        <span class="fa fa-desktop"></span>
-                                        <a href="https://ws.jom-jom.com/attendance/" target="_blank">Card Attendance</a>
-                                    </li>
-                                </ul>
+                <div class="project-container row">
+                            <!-- Student Management System -->
+                            <div class="col-lg-4 col-md-6 project-item">
+                                <div class="project-wrap">
+                                    <figure>
+                                        <img src="img/student_management.png" class="img-fluid" alt="Student Management System">
+                                        <a href="img/student_management.png" data-lightbox="gallery" data-title="Student Management" class="link-preview" title="Preview">
+                                            <i class="fa fa-eye"></i>
+                                        </a>
+                                        <a href="https://ws.jom-jom.com/project/student_management/" class="link-details" title="More Details" target="_blank">
+                                            <i class="fa fa-link"></i>
+                                        </a>
+                                        <a class="project-title" href="https://ws.jom-jom.com/project/student_management/" target="_blank">Student Management System</a>
+                                    </figure>
+                                </div>
                             </div>
                 
-                            <!-- PHP Section -->
-                            <div class="col-md-6 mb-4 mt-3">
-                                <h4>PHP Language</h4>
-                                <ul class="list-unstyled mt-3">
-                                    <li class="mb-2">
-                                        <span class="fa fa-desktop"></span>
-                                        <a href="https://ws.jom-jom.com/calculator/" target="_blank">Calculator</a>
-                                    </li>
-                                    <li>
-                                        <span class="fa fa-desktop"></span>
-                                        <a href="https://ws.jom-jom.com/BMI%20calculator/" target="_blank">BMI Calculator</a>
-                                    </li>
-                                </ul>
+                            <!-- Vegetable Shop -->
+                            <div class="col-lg-4 col-md-6 project-item">
+                                <div class="project-wrap">
+                                    <figure>
+                                        <img src="img/vegetable.png" class="img-fluid" alt="Vegetable Shop">
+                                        <a href="img/vegetable.png" data-lightbox="gallery" data-title="Vegetable Shop" class="link-preview" title="Preview">
+                                            <i class="fa fa-eye"></i>
+                                        </a>
+                                        <a href="https://ws.jom-jom.com/project/market/" class="link-details" title="More Details" target="_blank">
+                                            <i class="fa fa-link"></i>
+                                        </a>
+                                        <a class="project-title" href="https://ws.jom-jom.com/project/market/" target="_blank">Vegetable Shop <span>Ecommerce System</span></a>
+                                    </figure>
+                                </div>
                             </div>
                 
-                            <!-- Laravel Section -->
-                            <div class="col-md-6 mt-4 mb-4">
-                                <h4>LARAVEL Framework</h4>
-                                <ul class="list-unstyled mt-3">
-                                    <li>
-                                        <span class="fa fa-desktop"></span>
-                                        <a href="https://ws.jom-jom.com/market/" target="_blank">Vegetable Shop</a>
-                                    </li>
-                                </ul>
+                            <!-- Pokédex List -->
+                            <div class="col-lg-4 col-md-6 project-item">
+                                <div class="project-wrap">
+                                    <figure>
+                                        <img src="img/pokemon.png" class="img-fluid" alt="Pokédex List">
+                                        <a href="img/pokemon.png" data-lightbox="gallery" data-title="Pokédex List" class="link-preview" title="Preview">
+                                            <i class="fa fa-eye"></i>
+                                        </a>
+                                        <a href="https://ws.jom-jom.com/project/pokedex.php/" class="link-details" title="More Details" target="_blank">
+                                            <i class="fa fa-link"></i>
+                                        </a>
+                                        <a class="project-title" href="https://ws.jom-jom.com/project/pokedex.php/" target="_blank">Pokédex List <span>Fetch API</span></a>
+                                    </figure>
+                                </div>
                             </div>
                 
-                            <!-- JavaScript Section -->
-                            <div class="col-md-6 mt-4 mb-4">
-                                <h4>JavaScript Language</h4>
-                                <ul class="list-unstyled mt-3">
-                                    <li>
-                                        <span class="fa fa-desktop"></span>
-                                        <a href="https://ws.jom-jom.com/pokedex.php/" target="_blank">Fetch API (Pokédex)</a>
-                                    </li>
-                                </ul>
+                            <!-- Calculator -->
+                            <div class="col-lg-4 col-md-6 project-item">
+                                <div class="project-wrap">
+                                    <figure>
+                                        <img src="img/cal.png" class="img-fluid" alt="Calculator">
+                                        <a href="img/calculate.png" data-lightbox="gallery" data-title="Calculator" class="link-preview" title="Preview">
+                                            <i class="fa fa-eye"></i>
+                                        </a>
+                                        <a href="https://ws.jom-jom.com/project/calculator/" class="link-details" title="More Details" target="_blank">
+                                            <i class="fa fa-link"></i>
+                                        </a>
+                                        <a class="project-title" href="https://ws.jom-jom.com/project/calculator/" target="_blank">Calculator</a>
+                                    </figure>
+                                </div>
+                            </div>
+                
+                            <!-- Card Attendance -->
+                            <div class="col-lg-4 col-md-6 project-item">
+                                <div class="project-wrap">
+                                    <figure>
+                                        <img src="img/attendance.png" class="img-fluid" alt="Card Attendance">
+                                        <a href="img/attendance.png" data-lightbox="gallery" data-title="Card Attendance" class="link-preview" title="Preview">
+                                            <i class="fa fa-eye"></i>
+                                        </a>
+                                        <a href="https://ws.jom-jom.com/project/attendance/" class="link-details" title="More Details" target="_blank">
+                                            <i class="fa fa-link"></i>
+                                        </a>
+                                        <a class="project-title" href="https://ws.jom-jom.com/project/attendance/" target="_blank">Card Attendance</a>
+                                    </figure>
+                                </div>
+                            </div>
+                
+                            <!-- To-Do List -->
+                            <div class="col-lg-4 col-md-6 project-item">
+                                <div class="project-wrap">
+                                    <figure>
+                                        <img src="img/list1.png" class="img-fluid" alt="To-Do List">
+                                        <a href="img/todolist2024.png" data-lightbox="gallery" data-title="To-Do List" class="link-preview" title="Preview">
+                                            <i class="fa fa-eye"></i>
+                                        </a>
+                                        <a href="https://ws.jom-jom.com/project/To-do%20List/" class="link-details" title="More Details" target="_blank">
+                                            <i class="fa fa-link"></i>
+                                        </a>
+                                        <a class="project-title" href="https://ws.jom-jom.com/project/To-do%20List/" target="_blank">To-Do List</a>
+                                    </figure>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Optional CSS -->
-                <style>
-                    .service {
-                        background-color: #f9f9f9;
-                        padding: 30px 0;
-                    }
-                
-                    .content-header h2 {
-                        font-size: 32px;
-                        font-weight: 700;
-                        text-transform: uppercase;
-                        color: #333;
-                    }
-                
-                    .service h4 {
-                        font-size: 24px;
-                        font-weight: 600;
-                        color: #444;
-                    }
-                
-                    .service a {
-                        color: #007bff;
-                        text-decoration: none;
-                        font-weight: 500;
-                        transition: color 0.3s ease;
-                    }
-                
-                    .service a:hover {
-                        color: #0056b3;
-                    }
-                
-                    .fa-desktop {
-                        color: #007bff;
-                    }
-                
-                    .list-unstyled li {
-                        font-size: 16px;
-                        line-height: 1.8;
-                    }
-                
-                    @media (max-width: 768px) {
-                        .service h4 {
-                            font-size: 20px;
-                        }
-                
-                        .service .col-md-6 {
-                            margin-bottom: 30px;
-                        }
-                    }
-                </style>
                 
                 <!-- Service Start -->
                 
@@ -339,8 +413,8 @@
                                     <figure>
                                         <img src="img/HTML.png" class="img-fluid" alt="">
                                         <a href="img/HTML.png" data-lightbox="portfolio" data-title="HTML Tutorials" class="link-preview" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="qualification/HTML Tutorials.pdf" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="qualification/HTML Tutorials.pdf">HTML Tutorials <span>Great Learning</span></a>
+                                        <a href="qualification/HTML Tutorials.pdf" class="link-details" title="More Details" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="qualification/HTML Tutorials.pdf" target="_blank">HTML Tutorials <span>Great Learning</span></a>
                                     </figure>
                                 </div>
                             </div>
@@ -350,8 +424,8 @@
                                     <figure>
                                         <img src="img/php.png" class="img-fluid" alt="">
                                         <a href="img/php.png" class="link-preview" data-lightbox="portfolio" data-title="PHP of Beginner" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="qualification/PHP of Beginner.pdf" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="qualification/PHP of Beginner.pdf">PHP of Beginner <span>Great Learning</span></a>
+                                        <a href="qualification/PHP of Beginner.pdf" class="link-details" title="More Details"><i class="fa fa-link" target="_blank"></i></a>
+                                        <a class="portfolio-title" href="qualification/PHP of Beginner.pdf" target="_blank">PHP of Beginner <span>Great Learning</span></a>
                                     </figure>
                                 </div>
                             </div>
@@ -361,8 +435,8 @@
                                     <figure>
                                         <img src="img/mysql.png" class="img-fluid" alt="">
                                         <a href="img/mysql.png" class="link-preview" data-lightbox="portfolio" data-title="MySQL Tutorials" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="qualification/MySQL Tutorials.pdf" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="qualification/MySQL Tutorials.pdf">MySQL Tutorials <span>Great Learning</span></a>
+                                        <a href="qualification/MySQL Tutorials.pdf" class="link-details" title="More Details" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="qualification/MySQL Tutorials.pdf" target="_blank">MySQL Tutorials <span>Great Learning</span></a>
                                     </figure>
                                 </div>
                             </div>
@@ -372,8 +446,8 @@
                                     <figure>
                                         <img src="img/css.png" class="img-fluid" alt="">
                                         <a href="img/css.png" class="link-preview" data-lightbox="portfolio" data-title="Introduction To CSS Container Queries" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="qualification/CSS.pdf" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="qualification/CSS.pdf">Introduction To CSS Container Queries <span>HRD corp</span></a>
+                                        <a href="qualification/CSS.pdf" class="link-details" title="More Details" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="qualification/CSS.pdf" target="_blank">Introduction To CSS Container Queries <span>HRD corp</span></a>
                                     </figure>
                                 </div>
                             </div>
@@ -383,8 +457,8 @@
                                     <figure>
                                         <img src="img/js.png" class="img-fluid" alt="">
                                         <a href="img/js.png" class="link-preview" data-lightbox="portfolio" data-title="Introduction To JavaScript" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="qualification/JavaScript.pdf" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="qualification/JavaScript.pdf">Introduction To JavaScript <span>HRD corp</span></a>
+                                        <a href="qualification/JavaScript.pdf" class="link-details" title="More Details" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="qualification/JavaScript.pdf" target="_blank">Introduction To JavaScript <span>HRD corp</span></a>
                                     </figure>
                                 </div>
                             </div>
@@ -394,8 +468,8 @@
                                     <figure>
                                         <img src="img/simple.png" class="img-fluid" alt="">
                                         <a href="img/simplilearnphp.png" class="link-preview" data-lightbox="portfolio" data-title="Introduction To PHP" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="qualification/Introduction PHP.pdf" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="qualification/Introduction PHP.pdf">Introduction To PHP <span>Simplilearn</span></a>
+                                        <a href="qualification/Introduction PHP.pdf" class="link-details" title="More Details" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="qualification/Introduction PHP.pdf" target="_blank">Introduction To PHP <span>Simplilearn</span></a>
                                     </figure>
                                 </div>
                             </div>
@@ -413,20 +487,20 @@
                         <div class="row align-items-center review-slider">
                             <div class="col-md-12">
                                 <div class="review-slider-item">
-
                                     <div class="review-img">
-                                        <img src="img/teacher.png" alt="Image">
-                                        <div class="review-name">
-                                            <h3><b>Name :</b> Mr Ng Chuen Chuen</h3>
-                                            <h3><b>Position :</b> Head of It Department</h3>
-                                            <h3><b>Company :</b> Kolej Synergy</h3>
-                                            <h3><b>Phone :</b> +6012 - 434 - 6832</h3>
-                                            <h3><b>Email :</b> c2@synergy-college.com</h3>
+                                        <img src="img/teacher.png" alt="Image" class="img-fluid">
+                                        <div class="review-name mt-4">
+                                            <h3><b>Name :</b> Mr Ng Chuen Chuen</h3><br>
+                                            <h3><b>Position :</b> Head of IT Department</h3><br>
+                                            <h3><b>Company :</b> Kolej Synergy</h3><br>
+                                            <h3><b>Phone :</b> +6012 - 434 - 6832</h3><br>
+                                            <h3><b>Email :</b> c2@synergy-college.com</h3><br>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
                 <!-- Review End -->
@@ -446,11 +520,9 @@
                                     <p><i class="fa fa-phone"></i><a href="tel:+1234567890">+6016 - 881 - 3607</a></p>
                                     <p><i class="fa fa-map-marker"></i>361 Lorong Makmur 1/1 , Taman Makmur , 09600 Lunas , Kedah</p>
                                     <div class="social">
-                                        <a class="btn" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="btn" href=""><i class="fab fa-instagram"></i></a>
-                                        <a class="btn" href=""><i class="fab fa-youtube"></i></a>
+                                        <a href="https://wa.me/60168813607"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://www.instagram.com/ngweisheng1215/?hl=en"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://web.facebook.com/profile.php?id=100023555172048"><i class="fab fa-facebook-f"></i></a>
                                     </div>
                                 </div>
                             </div>

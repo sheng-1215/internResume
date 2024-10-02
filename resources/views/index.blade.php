@@ -102,7 +102,7 @@
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
 
-            if (username === "guest" && password === "123") {
+            if (username === "user" && password === "123") {
                 window.location.href = "{{ route('resume') }}"; // Redirect to the resume page
             } else {
                 document.getElementById('message').innerText = 'Invalid username or password.';

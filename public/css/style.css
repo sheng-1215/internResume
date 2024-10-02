@@ -864,14 +864,31 @@ a:focus {
 .review .review-img {
     display: flex;
     align-items: center;
+    flex-direction: column; /* Stack the image and text vertically */
+    text-align: center;
 }
 
 .review .review-img img {
-    width: 150px; 
-    height: 150px; 
-    object-fit: cover;
-    margin-right: 15px;
+    width: 100%; 
+    max-width: 245px; 
+    height: auto; 
+    margin-bottom: 15px;
 }
+
+@media (min-width: 768px) {
+    .review .review-img {
+        flex-direction: row; /* Side-by-side layout for larger screens */
+        text-align: left;
+    }
+
+    .review .review-img img {
+        margin-right: 15px;
+        margin-bottom: 0;
+        width: 245px; 
+        height: 265px;
+    }
+}
+
 
 .review .review-name h3 {
     font-size: 18px;
